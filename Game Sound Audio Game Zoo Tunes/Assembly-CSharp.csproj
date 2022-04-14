@@ -53,8 +53,13 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\MouseLook.cs" />
+    <Compile Include="Assets\AudioMover.cs" />
+    <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\Node.cs" />
+    <Compile Include="Assets\GameOverScript.cs" />
+    <Compile Include="Assets\MouseLook.cs" />
+    <Compile Include="Assets\AudioChanger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

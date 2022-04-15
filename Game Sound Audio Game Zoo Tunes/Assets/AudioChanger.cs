@@ -12,7 +12,8 @@ public class AudioChanger : MonoBehaviour
     public AudioSource _AClip5;
     public AudioSource _AClip6;
 
-    public PlayerMovement playerMoveOBJ2;
+    [SerializeField]
+    private PlayerMovement playerMoveOBJ;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class AudioChanger : MonoBehaviour
     
     public void SetNewAudio()
     {
-        switch (playerMoveOBJ2.AudioCounter)
+        switch (playerMoveOBJ.AudioCounter)
         {
             case 0:
                 // Change Clip here

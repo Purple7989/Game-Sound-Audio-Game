@@ -12,7 +12,8 @@ public class AudioMover : MonoBehaviour
     public GameObject Position5;
     public GameObject Position6;
 
-    public PlayerMovement playerMoveOBJ;
+    [SerializeField]
+    private PlayerMovement playerMoveOBJ;
 
     public void SetNewPosition()
     {

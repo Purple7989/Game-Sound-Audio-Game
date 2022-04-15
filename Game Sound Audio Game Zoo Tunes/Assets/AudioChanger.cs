@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioChanger : MonoBehaviour
 {
+
     public AudioSource _AClip1;
     public AudioSource _AClip2;
     public AudioSource _AClip3;
@@ -11,15 +12,72 @@ public class AudioChanger : MonoBehaviour
     public AudioSource _AClip5;
     public AudioSource _AClip6;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public PlayerMovement playerMoveOBJ2;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        _AClip1.enabled = false;
+        _AClip2.enabled = false;
+        _AClip3.enabled = false;
+        _AClip4.enabled = false;
+        _AClip5.enabled = false;
+        _AClip6.enabled = false;
     }
+    
+    public void SetNewAudio()
+    {
+        switch (playerMoveOBJ2.AudioCounter)
+        {
+            case 0:
+                // Change Clip here
+                _AClip1.enabled = true;
+                _AClip2.enabled = false;
+                _AClip3.enabled = false;
+                _AClip4.enabled = false;
+                _AClip5.enabled = false;
+                _AClip6.enabled = false;
+                break;
+            case 1:
+                _AClip2.enabled = true;
+                _AClip1.enabled = false;
+                _AClip3.enabled = false;
+                _AClip4.enabled = false;
+                _AClip5.enabled = false;
+                _AClip6.enabled = false;
+                break;
+            case 2:
+                _AClip3.enabled = true;
+                _AClip2.enabled = false;
+                _AClip4.enabled = false;
+                _AClip5.enabled = false;
+                _AClip6.enabled = false;
+                _AClip1.enabled = false;
+                break;
+            case 3:
+                _AClip4.enabled = true;
+                _AClip2.enabled = false;
+                _AClip3.enabled = false;
+                _AClip5.enabled = false;
+                _AClip6.enabled = false;
+                _AClip1.enabled = false;
+                break;
+            case 4:
+                _AClip5.enabled = true;
+                _AClip2.enabled = false;
+                _AClip3.enabled = false;
+                _AClip4.enabled = false;
+                _AClip6.enabled = false;
+                _AClip1.enabled = false;
+                break;
+            case 5:
+                _AClip6.enabled = true;
+                _AClip2.enabled = false;
+                _AClip3.enabled = false;
+                _AClip4.enabled = false;
+                _AClip5.enabled = false;
+                _AClip1.enabled = false;
+                break;
+        }
+    }
+    
 }

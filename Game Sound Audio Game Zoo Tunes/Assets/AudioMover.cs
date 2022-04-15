@@ -10,27 +10,18 @@ public class AudioMover : MonoBehaviour
     public GameObject Position3;
     public GameObject Position4;
     public GameObject Position5;
+    public GameObject Position6;
 
     public PlayerMovement playerMoveOBJ;
-    public AudioSource _AClip1;
-    public AudioSource _AClip2;
-    public AudioSource _AClip3;
-    public AudioSource _AClip4;
-    public AudioSource _AClip5;
-    public AudioSource _AClip6;
-
-
 
     public void SetNewPosition()
     {
         switch (playerMoveOBJ.PositionCounter)
         {
             case 0:
-
                 myObject.transform.position = Position1.transform.position;
                 break;
             case 1:
-                
                 myObject.transform.position = Position2.transform.position;
                 break;
             case 2:
@@ -41,6 +32,9 @@ public class AudioMover : MonoBehaviour
                 break;
             case 4:
                 myObject.transform.position = Position5.transform.position;
+                break;
+            case 5:
+                myObject.transform.position = Position6.transform.position;
                 break;
         }    
    }
